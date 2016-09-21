@@ -29,6 +29,7 @@ class CreateBlogsRequest extends Request {
             'blogcategories_id' => 'required', 
             'photo_main' => 'required', 
             'description' => 'required', 
+            'slug' => 'required',
             
 		];
 	}

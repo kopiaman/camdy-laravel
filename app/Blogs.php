@@ -30,7 +30,8 @@ class Blogs extends Model {
           'meta_keyword',
           'meta_description',
           'photo_main',
-          'description'
+          'description',
+          'slug'
     ];
     
 
@@ -77,5 +78,8 @@ class Blogs extends Model {
     }
 
 
-    
+    public function getRouteKeyName()
+  {
+    return 'slug';
+  }
 }

@@ -17,6 +17,7 @@
                             {!! Form::checkbox('delete_all',1,false,['class' => 'mass']) !!}
                         </th>
                         <th>Title</th>
+                        <th>Slug URL</th>
 <th>Date Posted</th>
 <th>Category</th>
 <th>Main Photo</th>
@@ -32,6 +33,7 @@
                                 {!! Form::checkbox('del-'.$row->id,1,false,['class' => 'single','data-id'=> $row->id]) !!}
                             </td>
                             <td>{{ $row->title }}</td>
+                             <td>{{ $row->slug }}</td>
 <td>{{ $row->date_posted }}</td>
 <td>{{ isset($row->blogcategories->name) ? $row->blogcategories->name : '' }}</td>
 <td>@if($row->photo_main != '')<img src="{{ asset('uploads/thumb') . '/'.  $row->photo_main }}">@endif</td>

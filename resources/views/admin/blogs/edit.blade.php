@@ -24,6 +24,16 @@
         {!! Form::text('title', old('title',$blogs->title), array('class'=>'form-control')) !!}
         
     </div>
+</div>
+
+<div class="form-group">
+    {!! Form::label('slug', 'Slug URL (no space!)*', array('class'=>'col-sm-2 control-label')) !!}
+    <div class="col-sm-10">
+        {!! Form::text('slug', old('slug',$blogs->slug), array('class'=>'form-control')) !!}
+        
+    </div>
+
+
 </div><div class="form-group">
     {!! Form::label('date_posted', 'Date Posted', array('class'=>'col-sm-2 control-label')) !!}
     <div class="col-sm-10">

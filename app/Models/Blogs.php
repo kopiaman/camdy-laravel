@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Eloquent as Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-
+use Cviebrock\EloquentSluggable\Sluggable;
 /**
  * @SWG\Definition(
  *      definition="Blogs",
@@ -65,6 +65,22 @@ class Blogs extends Model
     public function blogcategories()
     {
         return $this->hasOne('App\Models\BlogCategories', 'id', 'blogcategories_id');
+    }
+
+    use Sluggable;
+
+    /**
+     * Return the sluggable configuration array for this model.
+     *
+     * @return array
+     */
+    public function sluggable()
+    {
+        return [
+            'slug' => [
+                'source' => 'title'
+            ]
+        ];
     }
 
 }

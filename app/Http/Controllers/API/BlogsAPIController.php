@@ -156,10 +156,12 @@ class BlogsAPIController extends InfyOmBaseController
      *      )
      * )
      */
-    public function show($id)
+    public function show($slug)
     {
         /** @var Blogs $blogs */
-        $blogs = $this->blogsRepository->find($id);
+        //$blogs = $this->blogsRepository->find($slug);
+
+         $blogs = Blogs::where('slug', $slug)->first();
 
         if (empty($blogs)) {
             return Response::json(ResponseUtil::makeError('Blogs not found'), 404);

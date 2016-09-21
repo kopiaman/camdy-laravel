@@ -166,6 +166,12 @@ return [
         \InfyOm\Generator\InfyOmGeneratorServiceProvider::class,
         \InfyOm\CoreTemplates\CoreTemplatesServiceProvider::class,
 
+
+        /* SLUG for blog post */
+        Cviebrock\EloquentSluggable\ServiceProvider::class,
+
+        /* AUTO FACTORY CREATIOn*/
+        Mpociot\LaravelTestFactoryHelper\TestFactoryHelperServiceProvider::class,
     ],
 
     /*
@@ -217,6 +223,9 @@ return [
         'Form'      => Collective\Html\FormFacade::class,
         'Html'      => Collective\Html\HtmlFacade::class,
         'Flash'     => Laracasts\Flash\Flash::class,
+
+
+
 
     ],
 
